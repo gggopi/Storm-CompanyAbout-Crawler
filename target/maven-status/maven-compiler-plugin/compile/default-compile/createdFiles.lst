@@ -1,0 +1,4 @@
+com/tataatsu/WordCountTopology.class
+com/tataatsu/spout/RandomSentenceSpout.class
+com/tataatsu/WordCountTopology$SplitSentence.class
+com/tataatsu/WordCountTopology$WordCount.class
