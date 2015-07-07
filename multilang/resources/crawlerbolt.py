@@ -120,11 +120,12 @@ class Crawler(storm.BasicBolt):
                 #address['street']=d.items()[13][1]
                 about1['address']=address
                 about1['name']=d.items()[15][1]
+                nm=re.compile('.*registrant.street.*|.*domains.by.proxy.*',re.IGNORECASE)
+                if nm.match(str(about1['name'])):
+                    about1['name']=art.title
+
             except:
                 pass#p "domain name ERROR"
-            nm=re.compile('.*registrant.street.*|.*domains.by.proxy.*',re.IGNORECASE)
-            if nm.match(str(about1['name'])):
-                about1['name']=art.title
 
             for link in desc_link:
                 try:
